@@ -22,35 +22,35 @@ if ([_position, _minimumDistanceToTraderZones] call ExileClient_util_world_isTra
 {
 	private ["_text"];
 	_text = "Too Close to a Trader!";
-	["SuccessTitleAndText", ["Build Check", _text]] call ExileClient_gui_toaster_addTemplateToast;
+	["ErrorTitleAndText", ["Build Check", _text]] call ExileClient_gui_toaster_addTemplateToast;
 	_canbuild = false;
 };
 if ([_position, _minimumDistanceToSpawnZones] call ExileClient_util_world_isSpawnZoneInRange) then
 {	
 	private ["_text"];
 	_text = "Too Close to a Spawn Zone!";
-	["SuccessTitleAndText", ["Build Check", _text]] call ExileClient_gui_toaster_addTemplateToast;
+	["ErrorTitleAndText", ["Build Check", _text]] call ExileClient_gui_toaster_addTemplateToast;
 	_canbuild = false;
 };
 if ([_position, _minimumDistanceToOtherTerritories] call ExileClient_util_world_isTerritoryInRange) then
 {
 	private ["_text"];
 	_text = "Too Close to an Enemy Territory!";
-	["SuccessTitleAndText", ["Build Check", _text]] call ExileClient_gui_toaster_addTemplateToast;
+	["ErrorTitleAndText", ["Build Check", _text]] call ExileClient_gui_toaster_addTemplateToast;
 	_canbuild = false;
 };
 if (_position call ExileClient_util_world_isInNonConstructionZone) then
 {
 	private ["_text"];
 	_text = "In Block Zone!";
-	["SuccessTitleAndText", ["Build Check", _text]] call ExileClient_gui_toaster_addTemplateToast;
+	["ErrorTitleAndText", ["Build Check", _text]] call ExileClient_gui_toaster_addTemplateToast;
 	_canbuild = false;
 };
 if (_position call ExileClient_util_world_isInRadiatedZone) then
 {
 	private ["_text"];
 	_text = "In Rad Zone!";
-	["SuccessTitleAndText", ["Build Check", _text]] call ExileClient_gui_toaster_addTemplateToast;
+	["ErrorTitleAndText", ["Build Check", _text]] call ExileClient_gui_toaster_addTemplateToast;
 	_canbuild = false;
 };
 

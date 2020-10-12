@@ -11,9 +11,11 @@ This was developed on a test server with EXTDB2, no infistar and no battleye.
 ### Client
 
 **config.cpp**
+
 Default XM8 App example
 
 **initplayerlocal.sqf**
+
 After `if (!hasInterface || isServer) exitWith {};` paste the upper contents of initplayerlocal.sqf found in the Client folder
 
 If you are having trouble please view the example mission included.
